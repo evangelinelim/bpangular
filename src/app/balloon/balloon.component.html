@@ -1,0 +1,19 @@
+<app-options [hidden]="showGame" (clickStartGame)="startGame()"> </app-options>
+   <div *ngIf="showGame" class="mt-1 card container">
+    <div>
+        Balloons Popped: <span [innerText]='balloonsPop'></span>
+    </div>
+    <div>
+        Time Remaining: <span [innerText]='timeRemaining/1000'></span>
+    </div>
+<div [ngStyle]="{'height':balloonObj.height+'px', 'width':balloonObj.width+'px'}"  class= "balloon" #balloon>
+</div>
+    
+    <div class="pump">
+        <div class="handle"></div>
+        <div class="pump-box" (click)="inflateBalloon()">
+            <span>
+                {{count}}
+            </span>
+        </div>
+</div>

@@ -1,0 +1,10 @@
+<div [hidden] ="showOptions" class="card container">
+    <form (ngSubmit)="onSubmit()">
+        <div class ="form-group d-flex space-between">
+            <label for = "name"><fa-icon [icon]="faUserCircle"></fa-icon> Player Name:</label>
+            <input required type = "text" name="name" class = "form-control" [(ngModel)]="name">
+        <button class="button" type="submit">Ok</button>
+        </div>
+    </form>
+</div>
+<app-balloon (topScore)="saveHighScore($event)"></app-balloon>

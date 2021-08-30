@@ -1,0 +1,8 @@
+<app-players (savedPlayers)="loadScoreboard()"></app-players>
+<div *ngIf="!showGame" class="mt-2 card container">
+    <h3>SCOREBOARD</h3>
+   <div *ngFor="let player of (players | orderByScore)" class="d-flex space-between bd-2">    <span><fa-icon [icon]="faUser"></fa-icon> {{player.name}}</span>
+       <span>Score: {{player.highScore}}</span>
+    </div>
+    <button class = "button">test download</button>
+</div>
